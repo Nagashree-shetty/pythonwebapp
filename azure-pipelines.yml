@@ -22,10 +22,11 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'dockerhubteraformpython'
+        containerRegistry: 'dockerservice'
         repository: 'nagashreeshetty/newpythonwebapp'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+
 
