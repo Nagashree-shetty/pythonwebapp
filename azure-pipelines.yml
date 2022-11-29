@@ -42,8 +42,8 @@ stages:
           - script: |
               set -e 
 
-              terraform init -input = false
-              terraform apply -auto-approve
+              terraform init -input=false
+              terraform apply -input=false -auto-approve
             name: "Runterraformcmd"
             displayName: "Runterraformcmd"
             env:
@@ -51,4 +51,3 @@ stages:
               ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
               ARM_TENANT_ID: $(ARM_TENANT_ID)
               ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-              TF_VAR_imagebuild: $(tag)
