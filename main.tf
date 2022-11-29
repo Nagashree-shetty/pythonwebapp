@@ -3,6 +3,16 @@ provider "azurerm"{
     features {}    
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name = "tf_rg_blobstr"
+    storage_account_name = "tfstract"
+    container_name = "tfstatefilecotainer"
+    key = "terraform.tfstate"
+  }
+  
+}
+
 resource "azurerm_resource_group" "tf_testrg"{
     name = "tfresorcerg"
     location = "East US"
