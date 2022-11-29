@@ -29,11 +29,11 @@ stages:
               tags: |
                 $(tag)
   - stage: Provision
-    display_name: "Terraform on Azure"
+    displayName: "Terraform on Azure"
     dependsOn: Build
     jobs:
       - job: Provision
-        display name: "Provision Container "
+        displayName: "Provision Container "
         pool:
           vmImage: ubuntu-latest
         variables:
@@ -45,7 +45,7 @@ stages:
               terraform init -input = false
               terraform apply -auto-approve
               name: "Runterraformcmd"
-              display_name: "Runterraformcmd"
+              displayName: "Runterraformcmd"
               env:
                 ARM_CLIENT_ID: $(ARM_CLIENT_ID)
                 ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
