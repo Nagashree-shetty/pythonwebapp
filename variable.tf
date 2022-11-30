@@ -1,5 +1,5 @@
 variable "imagetag" {
-  type = "string"
+  type = string
   description = "Build tag from azure yml file"
 }
 
