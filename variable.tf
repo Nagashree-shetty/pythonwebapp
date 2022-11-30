@@ -1,4 +1,11 @@
 variable "imagebuild" {
   description = "Repository"
-  default = "nagashreeshetty/newpythonwebapp:latest"
+  default = "nagashreeshetty/newpythonwebapp:${var.imagetag}"
 }
+
+variable "imagetag"{
+  type = "string"
+  description = "Build tag from azure yml file"
+}
+
+
