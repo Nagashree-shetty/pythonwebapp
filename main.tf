@@ -30,7 +30,7 @@ resource "azurerm_container_group" "tfazcontainergp" {
 
   container {
     name   = "shreecontainer"
-    image  = "${var.imagebuild}"
+    image  = "nagashreeshetty/newpythonwebapp:${var.imagetag}"
     cpu    = "0.5"
     memory = "1.5"
 
